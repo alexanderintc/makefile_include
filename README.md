@@ -63,5 +63,6 @@ Commands supported
 ==================
 	make
 	make clean
-	make dist    (creates tarball if PKG_NAME and PKG_VERSION is defined or a VERSION file is found)
+	make dist      (creates tarball if PKG_NAME and PKG_VERSION is defined or a VERSION file is found)
+	make distclean (trigger clean and deletes created tarball)
 

@@ -112,7 +112,7 @@ dist: distclean
 	@$(if $(PKG_NAME),,echo "Define a proper package name in PKG_NAME macro!!";exit 1)
 	@$(if $(PKG_VERSION),,$(eval PKG_VERSION=$(shell cat VERSION 2>/dev/null)) $(if $(PKG_VERSION),,echo "Define a proper package version in PKG_VERSION macro or add a VERSION file!!";exit 1))
 	@rm -rf "$(PKG_NAME)-$(PKG_VERSION)";rm -f "$(PKG_NAME)-$(PKG_VERSION)".tar*;mkdir -p "$(PKG_NAME)-$(PKG_VERSION)";
-	@cp -af `find ./ -maxdepth 1|grep -Ev '$(PKG_NAME)-$(PKG_VERSION)|./$$'` "$(PKG_NAME)-$(PKG_VERSION)/" && tar -cvzf "$(PKG_NAME)-$(PKG_VERSION).tar.gz" "$(PKG_NAME)-$(PKG_VERSION)"
+	@cp -af `find ./ -maxdepth 1|grep -Ev '$(PKG_NAME)-$(PKG_VERSION)|./$$'` "$(PKG_NAME)-$(PKG_VERSION)/" && tar -cvJf "$(PKG_NAME)-$(PKG_VERSION).tar.xz" "$(PKG_NAME)-$(PKG_VERSION)"
 	@rm -rf "$(PKG_NAME)-$(PKG_VERSION)";
 
 -include $(DEPS)
