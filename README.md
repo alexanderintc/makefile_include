@@ -1,7 +1,7 @@
 Makefile extension (make.inc)
 =============================
 
-Simple Makefile extension to compile C sources.
+Simple GNU Makefile extension to compile C sources.
 
 'make.inc' is an include file for your source Makefile which already contains compilation methods for a C binary, library and
 archive files including dependency tracking and hardened gcc cflags.

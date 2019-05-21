@@ -1,5 +1,5 @@
 #
-# Makefile addon to compile C Binaries and Libraries
+# GNU Makefile addon to compile C Binaries and Libraries
 # Author: alexander.abraham@intel.com, Initial update: May 21, 2019
 #
 
