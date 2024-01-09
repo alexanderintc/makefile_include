@@ -47,11 +47,15 @@ CFLAGS := -DAPP_DEBUG
 bins := libs/libmyapp.so myapp libs/libmyapp.so libs/libtest.a testapp
 
 myapp_sources := myapp.c supporting.c
+
 myapp_cflags := -DFEATURE_TEST -O2
+
 myapp_ldflags := -ldl -lpthread -lmyapp
 
 libmyapp.so_sources := myappext.c libtest/user.c pluggins/*.c
+
 libmyapp.so_cflags := -DFEATURE_LOGGING
+
 libmyapp.so_ldflags := -lcap
 
 libtest.a_sources := test.c testext/hello.c
